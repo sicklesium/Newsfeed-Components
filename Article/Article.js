@@ -159,7 +159,7 @@ const createArticle = function(title, date, firstParagraph, secondParagraph, thi
   // FUNCTIONALITY
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open');
-  })
+  });
 
   // ADD CONTENT
   articleTitle.textContent = title;
