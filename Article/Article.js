@@ -142,6 +142,7 @@ const createArticle = function(title, date, firstParagraph, secondParagraph, thi
   const articlePara2 = document.createElement('p');
   const articlePara3 = document.createElement('p');
   const expandButton = document.createElement('span');
+  const readButton = document.createElement('span');
 
   // APPEND
   article.appendChild(articleTitle);
@@ -150,16 +151,22 @@ const createArticle = function(title, date, firstParagraph, secondParagraph, thi
   article.appendChild(articlePara2);
   article.appendChild(articlePara3);
   article.appendChild(expandButton);
+  article.appendChild(readButton);
 
   // ADD CLASSES
   article.classList.add('article');
   articleDate.classList.add('date');
   expandButton.classList.add('expandButton');
+  readButton.classList.add('readButton');
 
   // FUNCTIONALITY
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open');
   });
+
+  readButton.addEventListener('click', () => {
+    article.style.display = 'none';
+  })
 
   // ADD CONTENT
   articleTitle.textContent = title;
@@ -168,6 +175,7 @@ const createArticle = function(title, date, firstParagraph, secondParagraph, thi
   articlePara2.textContent = secondParagraph;
   articlePara3.textContent = thirdParagraph;
   expandButton.textContent = 'Read More';
+  readButton.textContent = 'I\'ve Read This';
 
   return article;
 };

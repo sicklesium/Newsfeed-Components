@@ -73,6 +73,15 @@
   transform: translate(-50%);
   background-color: white;
 }
+.article .readButton {
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: white;
+  position: absolute;
+  top: 5px;
+  right: 1%;
+}
 .article-open {
   height: 400px;
 }
